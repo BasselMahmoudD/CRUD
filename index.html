@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="w-100 p-3 rounded text-center mx-auto mt-3">
+            <h1 class="">Bookmarker
+                <div class="layer"></div>
+            </h1>
+            <hr class="first">
+            <h3><i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h3>
+        </div>
+        <div class="form p-4 text-start">
+            <label for="siteName"><i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name</label>
+            <input type="text" name="siteName" id="siteName" class="form-control my-2 " placeholder="Bookmark Name">
+            <label for="url"><i class="fa-solid fa-link pe-2 mt-4 "></i>
+                Site URL</label>
+            <input type="url" name="URl" id="url" class="form-control my-2 " placeholder="Website URL">
+        </div>
+        <button onclick="addSite()" class="btn px-5 btn-danger" >Submit</button>
+        <hr>
+        <div class="text-start"  >
+            <table class="w-100 table text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+        <!------------ Modal --------------->
+        
+        <div class="modal fade" id="exampleModal"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class=" px-4 py-2 text-start">
+                        <h2 class="modal-title fs-5" id="exampleModalLabel">Site Name or Url is not valid, Please follow the rules below :</h2>
+                    </div>
+                    <div class="px-4 text-start">
+                    <p><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters</p>
+                    <p><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</p>
+                    </div>
+                    <div class="p-3">
+                        <button type="button" onclick="closeWindow()" class="btn btn-primary" data-bs-dismiss="modal">Understand</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-family: 'Sevillana', cursive;
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.layer{
+    position: absolute;
+    z-index: -1;
+    height: 28px;
+    width: 100%;
+    background-color: #FEC260;
+    bottom: -10px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+h1:hover  .layer{
+    height: 40px;
+}
+
+hr {
+    border-top: 3px #000 dotted;
+    margin-top: 20px;
+}
+.first {
+    margin-top: 80px;
+}
+h3 {
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    color: transparent;
+    background-clip: text;
+}
