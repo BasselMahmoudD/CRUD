@@ -26,14 +26,19 @@
         <div class="form p-4 text-start">
             <label for="siteName"><i class="fa-solid fa-book-bookmark pe-2"></i>
                 Site Name</label>
-            <input type="text" name="siteName" id="siteName" class="form-control my-2 " placeholder="Bookmark Name">
+            <input type="text" oninput="isValidName()" name="siteName" id="siteName" class="form-control my-2 "
+                placeholder="Bookmark Name">
             <label for="url"><i class="fa-solid fa-link pe-2 mt-4 "></i>
                 Site URL</label>
-            <input type="url" name="URl" id="url" class="form-control my-2 " placeholder="Website URL">
+            <input type="url" name="URl" oninput="isValidUrl()" id="url" class="form-control my-2 "
+                placeholder="Website URL">
         </div>
-        <button onclick="addSite()" class="btn px-5 btn-danger" >Submit</button>
+        <button onclick="addSite()" class="btn px-5 btn-danger m-2">Submit</button>
+        <input id="Search"  type="text" oninput="searchItem()" class="form-control w-50 m-auto mb-3 m-2" placeholder="Search" >
+
         <hr>
-        <div class="text-start"  >
+        <!----------------- Table ------------------>
+        <div class="text-start">
             <table class="w-100 table text-center">
                 <thead>
                     <tr>
@@ -49,19 +54,23 @@
             </table>
         </div>
         <!------------ Modal --------------->
-        
-        <div class="modal fade" id="exampleModal"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal fade" id="exampleModal" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class=" px-4 py-2 text-start">
-                        <h2 class="modal-title fs-5" id="exampleModalLabel">Site Name or Url is not valid, Please follow the rules below :</h2>
+                        <h2 class="modal-title fs-5" id="exampleModalLabel">Site Name or Url is not valid, Please follow
+                            the rules below :</h2>
                     </div>
                     <div class="px-4 text-start">
-                    <p><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters</p>
-                    <p><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</p>
+                        <p><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters
+                        </p>
+                        <p><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</p>
                     </div>
                     <div class="p-3">
-                        <button type="button" onclick="closeWindow()" class="btn btn-primary" data-bs-dismiss="modal">Understand</button>
+                        <button type="button" onclick="closeWindow()" class="btn btn-primary"
+                            data-bs-dismiss="modal">Understand</button>
                     </div>
                 </div>
             </div>
